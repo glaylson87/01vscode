@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input placeholder="digite o contato">
+    <button onclick="procurar()">Procurar contato</button>
+    <p></p>
+</body>
+
+<style>
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+button{
+    width: 170px;
+    height: 70px;
+    border-radius: 15px;
+    border: none;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin-top: 40px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease;
+}
+
+input{
+    width: 250px;
+    height: 50px;
+    padding:20px;
+    background-color: rgb(218, 213, 213);
+    font-size: 25px;
+    border-radius: 15px;
+
+}
+
+p{
+    font-size: 45px;
+    font-weight: 800;
+
+}
+</style>
+    <script>
+
+        const contatos = [
+            { nome: "glaylson", numero: "(85) 985568074" },
+            { nome: "Joao", numero: "(85) 985568574" },
+            { nome: "Maria", numero: "(85) 985768074" },
+            { nome: "Carlos", numero: "(85) 985068074" },
+            { nome: "Pedro", numero: "(85) 986568074" },
+        ]
+
+        let input = document.querySelector("input")
+        let p = document.querySelector("p")
+
+        function procurar(){
+            for(let i = 0; i < contatos.length; i++)
+                if(input.value === contatos[i].nome){
+                    p.innerHTML = `Contato encontrado nome: ${contatos[i].nome} Tel: ${contatos[i].numero}`
+
+                break
+                }else{
+                    p.innerHTML = "Contanto nao encontrado, tente novamente."
+                }
+            
+
+        }
+    </script>
+
+</html>
