@@ -70,7 +70,7 @@ p{
 
         function procurar(){
             for(let i = 0; i < contatos.length; i++)
-                if(input.value === contatos[i].nome){
+                if(input.value.toLowerCase() === contatos[i].nome.toLocaleLowerCase()){
                     p.innerHTML = `Contato encontrado nome: ${contatos[i].nome} Tel: ${contatos[i].numero}`
 
                 break
