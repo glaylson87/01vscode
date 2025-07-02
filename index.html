@@ -8,10 +8,13 @@
 </head>
 
 <body>
-
-    <input placeholder="digite o contato">
-    <button onclick="procurar()">Procurar contato</button>
+<div>
+    <img src="./pesquisa contato.webp" alt="pesquisar-contato">
+    <h2>Procurar Contato</h2>
+    <input placeholder="nome do contato">
+    <button onclick="procurar()">Pesquisar</button>
     <p></p>
+    </div>
 </body>
 
 <style>
@@ -24,12 +27,23 @@ body{
     height: 100vh;
 }
 
+img{
+    width: 200px;
+    height: 200px;
+}
+
+h2{
+    font-weight: 800;
+    color: rgb(23, 17, 17);
+    font-size: 45px;
+}
+
 button{
     width: 170px;
-    height: 70px;
+    height: 50px;
     border-radius: 15px;
     border: none;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     background-color: green;
     color: white;
@@ -39,19 +53,46 @@ button{
       transition: box-shadow 0.3s ease;
 }
 
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.5;
+}
+
+
+
 input{
     width: 250px;
-    height: 50px;
+    height: 15px;
     padding:20px;
-    background-color: rgb(218, 213, 213);
-    font-size: 25px;
+    background-color: rgb(234, 229, 229);
+    font-size: 20px;
     border-radius: 15px;
+    
 
 }
 
 p{
-    font-size: 45px;
+    font-size: 25px;
     font-weight: 800;
+    color: rgb(23, 17, 17);
+    text-align: center;
+
+}
+
+div{
+    border: solid;
+    width: 400px;
+    height: 700px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(179, 85, 85);
 
 }
 </style>
@@ -69,9 +110,9 @@ p{
         let p = document.querySelector("p")
 
         function procurar(){
-            for(let i = 0; i < contatos.length; i++)
-                if(input.value.toLowerCase() === contatos[i].nome.toLocaleLowerCase()){
-                    p.innerHTML = `Contato encontrado nome: ${contatos[i].nome} Tel: ${contatos[i].numero}`
+            for( const contato of contatos)
+                if(input.value.toLowerCase() === contato.nome.toLocaleLowerCase()){
+                    p.innerHTML = `Contato encontrado nome: ${contato.nome} Tel: ${contato.numero}`
 
                 break
                 }else{
