@@ -9,13 +9,11 @@
 
 ### 🔎 Uma interface simples e direta para procurar contatos rapidamente por nome.
 
-<img src="https://user-images.githubusercontent.com/placeholder/screenshot.jpg" alt="Demonstração do projeto" width="500"/>
-
 ---
 
 ## 🚀 Acesse o projeto
 
-🔗 [Clique aqui para ver online](https://seu-usuario.github.io/nome-do-repositorio/) *(altere este link com o GitHub Pages)*
+🔗 [Clique aqui para ver online](https://glaylson87.github.io/01vscode/) *(altere este link com o GitHub Pages)*
 
 ---
 
