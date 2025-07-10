@@ -13,7 +13,7 @@
 
 ## 🚀 Acesse o projeto
 
-🔗 [Clique aqui para ver online](https://glaylson87.github.io/01vscode/) *(altere este link com o GitHub Pages)*
+🔗 [Clique aqui para ver online](https://glaylson87.github.io/01vscode/)
 
 ---
 
